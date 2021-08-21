@@ -1,3 +1,25 @@
+// Memory Price function
+function getMemoryPrice(memoryPrice) {
+  const memoryCostPrice = document.getElementById('memory-cost');
+  memoryCostPrice.innerText = memoryPrice;
+  updateTotalPrice();
+}
+
+// Storage Price function
+function getStoragePrice(storagePrice) {
+  const storageCostPrice = document.getElementById('storage-cost');
+  storageCostPrice.innerText = storagePrice;
+  updateTotalPrice();
+}
+
+// Delivery Charge function
+function getDelivery(deliveryCharge) {
+  const deliveryCostPrice = document.getElementById('delivery-cost');
+  deliveryCostPrice.innerText = deliveryCharge;
+  updateTotalPrice();
+}
+
+
 
 // update Total price
 function updateTotalPrice() {
@@ -9,74 +31,57 @@ function updateTotalPrice() {
   const finatTotalPrice = document.getElementById('final-total-price');
 
   const allTotalPrice = totalCostPrice.innerText= 1299 + parseFloat(memoryCostPrice.innerText) + parseFloat(storageCostPrice.innerText) + parseFloat(deliveryCostPrice.innerText);
-
   finatTotalPrice.innerText = allTotalPrice;
   return allTotalPrice;
 
 }
 
-//Memory cost price 
+//Memory button 
 document.getElementById('frist-memory-btn').addEventListener('click', function(){
-const memoryCost1 = document.getElementById('memory-cost');
-memoryCost1.innerText = '0';
-updateTotalPrice() 
+getMemoryPrice(0);
 
-})
+});
 
 document.getElementById('second-memory-btn').addEventListener('click', function(){
-const memoryCost2 = document.getElementById('memory-cost');
-memoryCost2.innerText = '180';
-updateTotalPrice() 
-})
+  getMemoryPrice(180);
+});
 
-// storage Cost price
+// storage Cost button
 
 document.getElementById('frist-ssd-btn').addEventListener('click', function(){
-  const storageCost1 = document.getElementById('storage-cost');
-  storageCost1.innerText = '0';
-  updateTotalPrice() 
+  getStoragePrice(0);
 })
 document.getElementById('second-ssd-btn').addEventListener('click', function(){
-  const storageCost2 = document.getElementById('storage-cost');
-  storageCost2.innerText = '100';
-  updateTotalPrice() 
-})
+  getStoragePrice(100); 
+});
 document.getElementById('third-ssd-btn').addEventListener('click', function(){
-  const storageCost3 = document.getElementById('storage-cost');
-  storageCost3.innerText = '180';
-  updateTotalPrice() 
-})
+  getStoragePrice(180); 
+});
 
 
 
-//delivery Cost price 
+//delivery Cost button 
 
 document.getElementById('frist-delivery-btn').addEventListener('click', function(){
   
-const deliveryCost1 = document.getElementById('delivery-cost');
-deliveryCost1.innerText = '0';
-updateTotalPrice() 
+  getDelivery(0);
 })
 document.getElementById('second-delivery-btn').addEventListener('click', function(){
-  const deliveryCost2 = document.getElementById('delivery-cost');
-  deliveryCost2.innerText = '20';
-  updateTotalPrice() 
+  getDelivery(20) ;
 })
 
 
 // discount total price 
 
 document.getElementById('promo-code-btn').addEventListener('click', function () {
-  const totalPriceAmount = document.getElementById('all-Total-price')
-  const finalTotalAmount = document.getElementById('final-total-price');
+
+const finalTotalAmount = document.getElementById('final-total-price');
 
   const promoCode = document.getElementById('copun-input');
-  const totalDiscount = (updateTotalPrice() / 100) * 20;
-  const finalDiscount = updateTotalPrice() - totalDiscount;
+  const discount = (updateTotalPrice() / 100) * 20;
+  const finalDiscount = updateTotalPrice() - discount;
   if (promoCode.value == 'stevekaku') {
       finalTotalAmount.innerText = finalDiscount;
-      totalPriceAmount.innerText = finalDiscount;
-  
   }
   promoCode.value = '';
 
