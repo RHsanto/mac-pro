@@ -1,16 +1,16 @@
 
-
-
-// updateTotal price
+// update Total price
 function updateTotalPrice() {
-  const memoryPrice = document.getElementById('memory-cost');
-  const storagePrice = document.getElementById('storage-cost');
-  const deliveryCost = document.getElementById('delivery-cost');
-  const totalPrice = document.getElementById('all-Total-price');
+  
+  const totalCostPrice = document.getElementById('all-Total-price')
+  const memoryCostPrice = document.getElementById('memory-cost');
+  const storageCostPrice = document.getElementById('storage-cost');
+  const deliveryCostPrice = document.getElementById('delivery-cost');
+  const finatTotalPrice = document.getElementById('final-total-price');
 
-  const allTotalPrice = 1299 + parseFloat(memoryPrice.innerText) + parseFloat(storagePrice.innerText) + parseFloat(deliveryCost.innerText);
+  const allTotalPrice = totalCostPrice.innerText= 1299 + parseFloat(memoryCostPrice.innerText) + parseFloat(storageCostPrice.innerText) + parseFloat(deliveryCostPrice.innerText);
 
-  totalPrice.innerText = allTotalPrice;
+  finatTotalPrice.innerText = allTotalPrice;
   return allTotalPrice;
 
 }
@@ -67,6 +67,7 @@ document.getElementById('second-delivery-btn').addEventListener('click', functio
 // discount total price 
 
 document.getElementById('promo-code-btn').addEventListener('click', function () {
+  const totalPriceAmount = document.getElementById('all-Total-price')
   const finalTotalAmount = document.getElementById('final-total-price');
 
   const promoCode = document.getElementById('copun-input');
@@ -74,8 +75,10 @@ document.getElementById('promo-code-btn').addEventListener('click', function () 
   const finalDiscount = updateTotalPrice() - totalDiscount;
   if (promoCode.value == 'stevekaku') {
       finalTotalAmount.innerText = finalDiscount;
+      totalPriceAmount.innerText = finalDiscount;
   
   }
   promoCode.value = '';
 
 })
+
