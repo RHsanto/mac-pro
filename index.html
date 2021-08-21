@@ -40,22 +40,22 @@
  <!-- strat configaration section  -->
             <div class="memory my-5">
               <h4 >Memory</h4>
-              <button type="button" class="btn btn-outline-dark ">8GB unified memory</button>
-                <button type="button" class="btn  btn-outline-dark " >16GB unified memory</button>
+              <button id="frist-memory-btn" type="button" class="btn btn-outline-dark ">8GB unified memory</button>
+                <button id="second-memory-btn" type="button" class="btn  btn-outline-dark " >16GB unified memory</button>
             </div>
 
             <div class="storage my-5">
               <h4 >Storage</h4>
-              <button type="button" class="btn btn-outline-dark">256GB SSD storage</button>
-              <button type="button" class="btn  btn-outline-dark " >
+              <button id="frist-ssd-btn" type="button" class="btn btn-outline-dark">256GB SSD storage</button>
+              <button id="second-ssd-btn" type="button" class="btn  btn-outline-dark " >
                 512GB SSD storage</button>
-              <button type="button" class="btn  btn-outline-dark" >1TB SSD storage</button>
+              <button id="third-ssd-btn" type="button" class="btn  btn-outline-dark" >1TB SSD storage</button>
              </div>
 
             <div class="storage ">
               <h4 >Choose your delivery option</h4>
-              <button type="button" class="btn  btn-outline-dark">Friday, Aug 25 FREE Prime Delivery</button>
-              <button type="button" class="btn  btn-outline-dark" >Friday, Aug 21 Delivery Charge $20</button>
+              <button id="frist-delivery-btn" type="button" class="btn  btn-outline-dark">Friday, Aug 25 FREE Prime Delivery</button>
+              <button id="second-delivery-btn" type="button" class="btn  btn-outline-dark" >Friday, Aug 21 Delivery Charge $20</button>
      <!-- end of configaration section  -->
              </div>
 
@@ -85,7 +85,7 @@
                   </tr>
                   <tr>
                     <td >Total Price</td>
-                    <td>$<span id="total-price">1299</span></td>
+                    <td>$<span id="all-Total-price">1299</span></td>
                   </tr>
 
                 </tbody>
@@ -96,8 +96,8 @@
            <div class="copun-code-section my-5">
             <h5 class="fw-bold my-3">Add promo code</h5>
             <div class="input-group mb-3 w-50"> 
-              <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-danger" type="button" id="button-addon2">Apply</button>
+              <input id="copun-input" type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-danger" type="button" id="promo-code-btn">Apply</button>
             </div>
            </div>
  <!-- end mac price list section  -->
@@ -113,65 +113,8 @@
 
     <footer>
       <hr class="w-75 mx-auto">
-      <h1 class="text-center">Total: $<span>1299</span></h1>
+      <h1 class="text-center">Total: $<span id="final-total-price">1299</span></h1>
     </footer>
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <!-- <div class="memory">
-    <button type="button" class="btn border-dark border-1 ">Secondary</button>
-    <button type="button" class="btn border-dark border-1 " data-bs-toggle="button"aria-pressed="true">Active toggle button</button>
-
-   </div>
-
-   <div class="storage">
-        
-    <button type="button" class="btn border-dark border-1 ">Secondary</button>
-    <button type="button" class="btn border-dark border-1 " data-bs-toggle="button"aria-pressed="true">Active toggle button</button>
-    <button type="button" class="btn border-dark border-1 " data-bs-toggle="button" >Disabled toggle button</button>
-   </div>
-   
-    <div class="delivery">
-      <button type="button" class="btn border-dark border-1 ">Secondary</button>
-    <button type="button" class="btn border-dark border-1 " data-bs-toggle="button"aria-pressed="true">Active toggle button</button>
-    <button type="button" class="btn border-dark border-1 " data-bs-toggle="button" >Disabled toggle button</button>
-    </div>
-    -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -179,6 +122,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
    
-  
+ <script src="js/mac.js"></script>
   </body>
 </html>
